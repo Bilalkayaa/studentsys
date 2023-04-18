@@ -122,8 +122,10 @@ class _MyAppState extends State<MyApp> {
                     Text("Güncelle"),
                   ],
                 ),
-                onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: ((context) => StudentEdit(selectedStudent))));
+                onPressed: () async{
+                  await Navigator.push(context, MaterialPageRoute(builder: ((context) => StudentEdit(selectedStudent))));
+                  setState(() {
+                  });
                 },
               ),
             ),
