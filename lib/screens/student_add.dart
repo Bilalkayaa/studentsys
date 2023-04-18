@@ -89,7 +89,7 @@ class _StudentAddState extends State with StudentValidationMixin {
           formKey.currentState!.save();          
             students.add(student);
             saveStudent();
-            Navigator.pop(context,true);                             
+            Navigator.pop(context);                             
         }
       },
     );

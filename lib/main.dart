@@ -98,8 +98,11 @@ class _MyAppState extends State<MyApp> {
                     Text("Yeni öğrenci"),
                   ],
                 ),
-                onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: ((context) => StudentAdd(students))));
+                onPressed: () async{
+                  await Navigator.push(context, MaterialPageRoute(builder: ((context) => StudentAdd(students))));
+                  setState(() {
+                    
+                  });
                 },
               ),
             ),
